@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import Loading from './assets/loading.svg';
+import loading from './assets/loading.svg';
 
 function App() {
-
   const [image, setImage] = useState(null);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ function App() {
     if (image) {
       return <img src={image.message} alt="catioro" />
     }
-      return <img src={Loading} alt="Carregando imagem..." />
+      return <img src={loading} alt="Carregando imagem..." />
   }
 
   const imagem = buildImage();
